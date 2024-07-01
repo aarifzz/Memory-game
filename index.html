@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Memory Card Game</title>
   <link rel="stylesheet" href="memory.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
 </head>
 <body>
   <div class="frame" id="frame">
@@ -12,14 +14,18 @@
     <div class="rules">
       <h2>Instructions:</h2>
       <ul>
-        <li>Flip two cards per turn..</li>
-        <li>Match all the pairs within 60 seconds to win</li>
-        <li>If you don't match all the pairs within 60 seconds, You Lose</li>
-        <li>Have fun!</li>
+        <li> Click the "Go" button to begin. Cards are shuffled and placed face down.</li><br>
+        <li> Match all card pairs within the given time to progress to the next level.</li><br>
+        <li>If you don't match all the pairs within 60 seconds, You stay in the same level</li><br>
+        <li>LEVEL 1: Match all the cards within 60 seconds</li><br>
+        <li>LEVEL 2: 2 second deduction for wrong match and 2 second bonus for correct match</li><br>
+        <li>LEVEL 3: 3 second deduction for wrong match and 3 second bonus for correct match</li><br>
+
       </ul>
     </div>
     <button id="gobutton">Go</button>
   </div>
+  <div id="level">Level 1</div>
   <div id="timer">1:00</div>
     <div class="container" >
 
@@ -113,9 +119,3 @@
   <script src="memory.js"></script>
 </body>
 </html>
-
-
-
-
-
-
