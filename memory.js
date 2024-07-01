@@ -1,3 +1,5 @@
+let currentlevel=1;
+let level1=document.getElementById('level');
 gobutton=document.getElementById('gobutton');
 gobutton.onclick=function(){
 
@@ -87,8 +89,17 @@ function checkForMatch() {
     firstCard.classList.add('matched');
     secondCard.classList.add('matched');
     matchedcard+=2;
+    if(currentlevel>1){
+      addtime(currentlevel);
+    }
     if(matchedcard===cards.length){
-      congratulate();
+      if(currentlevel<3){
+        levelup();
+      }
+      else{
+        congratulate();
+      }
+   
     }
     resetCards();
   } else {
@@ -97,8 +108,11 @@ function checkForMatch() {
       firstCard.classList.remove('flip');
       secondCard.classList.remove('flip');
       resetCards();
-      subtracttime(2);
-    }, 1000);
+      if(currentlevel>1){
+        subtracttime(currentlevel);
+      }
+     
+    }, 100);
   }
 }
 
@@ -121,11 +135,25 @@ function resetgame() {
 }
 
 function congratulate(){
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { y: 0.6 }
+    
+  });
   resetgame();
   const message=document.createElement('div');
   message.classList.add('congratulation');
-  message.textContent='Congratulations! YOU WON';
+  message.textContent='Congratulations! You Completed all three Levels ';
   document.body.appendChild(message);
+  const newgame = document.createElement('div');
+  newgame.classList.add('tryagain');
+  newgame.textContent = 'New Game';
+  document.body.appendChild(newgame);
+
+  newgame.addEventListener('click', function() {
+    location.reload();
+  });
 }
 
 function gameover() {
@@ -147,22 +175,54 @@ function gameover() {
 }
 
 
-// function subtracttime(seconds){
-//   remainingtime-=seconds;
-//   if(remainingtime<0){
-//     remainingtime=0;
-//     stoptimer();
-//     gameover();
-//   }
-//   timer.textContent = ` ${pad(Math.floor(remainingtime / 60))}:${pad(remainingtime % 60)}`;
-// }
+function subtracttime(seconds){
+  remainingtime-=seconds;
+  if(remainingtime<0){
+    remainingtime=0;
+    stoptimer();
+    gameover();
+  }
+  timer.textContent = ` ${pad(Math.floor(remainingtime / 60))}:${pad(remainingtime % 60)}`;
+}
 
+function addtime(seconds){
+  remainingtime+=seconds;
+  if(remainingtime<0){
+    remainingtime=0;
+    stoptimer();
+    gameover();
+  }
+  timer.textContent = ` ${pad(Math.floor(remainingtime / 60))}:${pad(remainingtime % 60)}`;
+}
+
+function levelup() {
+
+  currentlevel++;
+  level1.textContent=`Level ${currentlevel}`;
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { y: 0.6 }
+    
+  });
+  resetgame();
+  const levelno = document.createElement('div');
+  levelno.classList.add('levelup');
+  levelno.textContent = 'Level Up! Get Ready for the Next Level!';
+  document.body.appendChild(levelno);
+
+  setTimeout(() => {
+    levelno.remove();
+    startgame();
+  }, 5000); // 3 seconds delay before starting the next level
+}
 
 
 
 const notification = document.createElement('div');
 notification.classList.add('notification');
 document.body.appendChild(notification);
+
 
 
 
