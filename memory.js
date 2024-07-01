@@ -77,7 +77,7 @@ cards.forEach(card => {
     } else {
       secondCard = card;
       // Delay the check for a match to ensure the second card flips first
-      setTimeout(checkForMatch, 100);
+      setTimeout(checkForMatch, 500);
     }
   });
 });
