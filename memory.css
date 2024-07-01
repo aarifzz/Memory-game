@@ -1,0 +1,951 @@
+*{
+  border: 0;
+  margin: 0;
+
+}
+
+
+#timer{
+  font-size: 2rem;
+  position: relative;
+  left: 415px;
+  top: 100px;
+
+}
+#start{
+ background-color: #727B74;
+
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  left: 410px;
+  top: 20px;
+
+}
+body{
+background-color: #4C5760;
+  background-size:cover ;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100;
+}
+.container {
+background-color:#93A8AC;
+  perspective: 1000;
+  position: relative;
+  left: 200px;
+  border: 1px solid black;
+  max-width: 900px;
+  max-height:750px;
+border-radius: 10px;
+
+
+}
+
+.card1{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 100px;
+  left: 50px;
+  background-color: green;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+
+
+.fcard1{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(35, 73, 105);
+  background-image: url(images/fbg1.avif);
+  background-size: cover;
+  background-position: center;
+}
+.bcard1{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(27, 116, 195);
+  
+  transform: rotateY(180deg);
+  
+  
+}
+.bcard1 img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.card1.flip{
+  transform: rotateY(180deg);
+}
+.card1.matched{
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: scale(0.5); /* Optional: scale down the card */
+}
+.card2{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 260px;
+  top: 310px;
+  background-color: green;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+
+
+.fcard2{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(35, 73, 105);
+  background-image: url(images/fbg1.avif);
+  background-size: cover;
+  background-position: center;
+
+}
+.bcard2{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(27, 116, 195);
+  
+  transform: rotateY(180deg);
+  
+  
+}
+.bcard2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card2.flip{
+  transform: rotateY(180deg);
+}
+
+.card2.matched{
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: scale(0.5); /* Optional: scale down the card */
+}
+
+.card3{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 50px;
+  top: 60px;
+  background-color: green;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.fcard3{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(35, 73, 105);
+
+}
+
+.bcard3{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(27, 116, 195);
+  
+  transform: rotateY(180deg);
+  
+  
+  
+}
+
+.bcard3 img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.card3.flip{
+  transform: rotateY(180deg);
+}
+
+.card3.matched{
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: scale(0.5); /* Optional: scale down the card */
+}
+
+
+.card4{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 260px;
+
+  bottom:200px;
+  background-color: green;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.fcard4{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(35, 73, 105);
+
+}
+.bcard4{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(27, 116, 195);
+  
+  transform: rotateY(180deg);
+  
+  
+  
+}
+.bcard4 img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.card4.flip{
+  transform: rotateY(180deg);
+}
+.card4.matched{
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: scale(0.5); /* Optional: scale down the card */
+}
+
+.card5{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 260px;
+bottom: 140px;
+  background-color: green;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.fcard5{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(35, 73, 105);
+
+}
+.bcard5{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(27, 116, 195);
+  
+  transform: rotateY(180deg);
+  
+  
+  
+}
+.bcard5 img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.card5.flip{
+  transform: rotateY(180deg);
+}
+.card5.matched{
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: scale(0.5); /* Optional: scale down the card */
+}
+
+.card6{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 500px;
+  bottom:400px;
+  background-color: green;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.fcard6{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(35, 73, 105);
+
+}
+.bcard6{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(27, 116, 195);
+  
+  transform: rotateY(180deg);
+  
+  
+  
+}
+.bcard6 img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.card6.flip{
+  transform: rotateY(180deg);
+}
+.card6.matched{
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: scale(0.5); /* Optional: scale down the card */
+}
+
+.card7{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  bottom: 50px;
+  left: 50px;
+  background-color: green;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.fcard7{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(35, 73, 105);
+
+}
+.bcard7{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(27, 116, 195);
+  
+  transform: rotateY(180deg);
+  
+  
+  
+}
+.bcard7 img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.card7.flip{
+  transform: rotateY(180deg);
+}
+.card7.matched{
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: scale(0.5); /* Optional: scale down the card */
+}
+
+.card8{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 750px;
+  bottom:600px;
+  background-color: green;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.fcard8{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(35, 73, 105);
+
+}
+.bcard8{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(27, 116, 195);
+  
+  transform: rotateY(180deg);
+  
+  
+  
+}
+.bcard8 img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.card8.flip{
+  transform: rotateY(180deg);
+}
+
+.card8.matched{
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: scale(0.5); /* Optional: scale down the card */
+}
+
+
+
+.card9{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 500px;
+  bottom:540px;
+  background-color: green;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.fcard9{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(35, 73, 105);
+
+}
+.bcard9{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(27, 116, 195);
+  
+  transform: rotateY(180deg);
+  
+  
+  
+}
+.bcard9 img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.card9.flip{
+  transform: rotateY(180deg);
+}
+
+.card9.matched{
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: scale(0.5); /* Optional: scale down the card */
+}
+
+.card10{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 500px;
+  bottom:350px;
+  background-color: green;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.fcard10{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(35, 73, 105);
+
+}
+.bcard10{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(27, 116, 195);
+  
+  transform: rotateY(180deg);
+  
+  
+  
+}
+.bcard10 img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.card10.flip{
+  transform: rotateY(180deg);
+}
+
+.card10.matched{
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: scale(0.5); /* Optional: scale down the card */
+}
+
+.card11{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 750px;
+  bottom:600px;
+  background-color: green;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.fcard11{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(35, 73, 105);
+
+}
+.bcard11{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(27, 116, 195);
+  
+  transform: rotateY(180deg);
+  
+  
+  
+}
+.bcard11 img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.card11.flip{
+  transform: rotateY(180deg);
+}
+
+.card11.matched{
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: scale(0.5); /* Optional: scale down the card */
+}
+
+
+.card12{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 750px;
+  bottom:550px;
+  background-color: green;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.fcard12{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(35, 73, 105);
+
+}
+.bcard12{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(27, 116, 195);
+  
+  transform: rotateY(180deg);
+  
+  
+  
+}
+.bcard12 img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.card12.flip{
+  transform: rotateY(180deg);
+}
+
+.card12.matched{
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: scale(0.5); /* Optional: scale down the card */
+}
+
+.card13{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 750px;
+  bottom:940px;
+  background-color: green;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.fcard13{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(35, 73, 105);
+
+}
+.bcard13{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(27, 116, 195);
+  
+  transform: rotateY(180deg);
+  
+  
+  
+}
+.bcard13 img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.card13.flip{
+  transform: rotateY(180deg);
+}
+
+.card13.matched{
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: scale(0.5); /* Optional: scale down the card */
+}
+
+.card14{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 500px;
+  bottom:890px;
+  background-color: green;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.fcard14{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(35, 73, 105);
+
+}
+.bcard14{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(27, 116, 195);
+  
+  transform: rotateY(180deg);
+  
+  
+  
+}
+.bcard14 img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.card14.flip{
+  transform: rotateY(180deg);
+}
+
+.card14.matched{
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: scale(0.5); /* Optional: scale down the card */
+}
+
+.card15{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 260px;
+  bottom:850px;
+  background-color: green;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.fcard15{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(35, 73, 105);
+
+}
+.bcard15{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(27, 116, 195);
+  
+  transform: rotateY(180deg);
+  
+  
+  
+}
+.bcard15 img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.card15.flip{
+  transform: rotateY(180deg);
+}
+
+.card15.matched{
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: scale(0.5); /* Optional: scale down the card */
+}
+
+.card16{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  bottom:1090px;
+  left: 50px;
+  background-color: green;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.fcard16{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(35, 73, 105);
+
+}
+.bcard16{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(27, 116, 195);
+  
+  transform: rotateY(180deg);
+  
+  
+  
+}
+.bcard16 img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.card16.flip{
+  transform: rotateY(180deg);
+}
+
+.card16.matched{
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: scale(0.5); /* Optional: scale down the card */
+}
+
+
+.congratulation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  display: flex;
+
+  border: 2px solid #ccc;  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  z-index: 1000; /* Ensure it's on top of everything */
+}
+
+.gameover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  z-index: 1000; /* Ensure it's on top of everything */
+}
+
+.frame {
+  color: #333333  ;
+  background-color: #D7CEB2;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: absolute; /* Position the frame relative to the body */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center precisely */
+  z-index: 999; /* Ensure it appears above other content */
+}
+
+.frame h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.rules {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.rules h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.rules ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+#gobutton {
+  background-color: #727B74;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  position: relative;
+  left: 10px;
+}
+
+button:hover {
+  background-color: #87B38D;
+}
+
+.tryagain{
+border: 1px solid black;
+
+  left: 600px;
+  bottom:300px ;
+  width: 100px;
+  height: 100px;
+  background-color: black; /* Semi-transparent white background */
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  z-index: 1000; /* Ensure it's on top of everything */
+  cursor: pointer;
+  position: relative;
+
+
+}
+
+
+.fcard1,
+.fcard2,
+.fcard3,
+.fcard4,
+.fcard5,
+.fcard6,
+.fcard7,
+.fcard8,
+.fcard9,
+.fcard10,
+.fcard11,
+.fcard12,
+.fcard13,
+.fcard14,
+.fcard15,
+.fcard16 {
+  background-image: url(images/fbg1.avif);
+  background-size: cover;
+  background-position: center;
+}
