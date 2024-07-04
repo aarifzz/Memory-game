@@ -235,6 +235,61 @@ button:hover {
   z-index: 9999;
 }
 
+@media (max-width: 768px) {
+  #timer {
+    left: auto;
+    top: auto;
+    text-align: center;
+  }
+  #level {
+    left: auto;
+    top: auto;
+    text-align: center;
+  }
+  .container {
+    left: 0;
+    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+    height: auto;
+  }
+  .card {
+    width: 80px;
+    height: 80px;
+  }
+  .frame {
+    max-width: 90%;
+    padding: 20px;
+  }
+  .rules h2, .rules ul {
+    font-size: 1em;
+  }
+  #gobutton {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card {
+    width: 60px;
+    height: 60px;
+  }
+  .frame {
+    max-width: 95%;
+    padding: 15px;
+  }
+  .rules h2, .rules ul {
+    font-size: 0.9em;
+  }
+  #gobutton {
+    font-size: 0.8em;
+    padding: 6px 12px;
+  }
+}
 
 
 
